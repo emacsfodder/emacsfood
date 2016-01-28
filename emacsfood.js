@@ -5,7 +5,7 @@ var optparse = require('optparse'),
 
 var parser = new optparse.OptionParser([
     ['-h', '--help', 'Show this help message'],
-    ['-V', '--version', 'Show the Marmalade version'],
+    ['-V', '--version', 'Show the EmacsFood version'],
     ['-p', '--port PORT', 'Port to run the server on (default 3000)'],
     ['--hostname HOSTNAME', 'Specify the hostname of the server']
 ]);
@@ -13,7 +13,7 @@ var parser = new optparse.OptionParser([
 var port = 3000;
 var hostname;
 
-parser.banner = "Usage: marmalade [OPTION]...\n" +
+parser.banner = "Usage: meatpack  [OPTION]...\n" +
       "\n" +
       "An Emacs Lisp package server.";
 
@@ -23,7 +23,7 @@ parser.on('help', function() {
 });
 
 parser.on('version', function() {
-    console.log('Marmalade 0.0.3');
+    console.log('EmacsFood 0.0.3');
     process.exit();
 });
 

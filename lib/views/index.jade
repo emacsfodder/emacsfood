@@ -1,5 +1,5 @@
-// Marmalade: an Emacs Lisp package server.
-// Copyright (C) 2010 Google Inc.
+// EmacsFood: an Emacs Lisp package server.
+// Copyright (C) 2016 EmacsFodder
 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -15,37 +15,53 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #start
-  span.intro Marmalade is a package archive for Emacs Lisp.
-  ul
-    li It makes it <strong>easy to distribute packages</strong>.
-    li
-      | It's <strong>fully compatible</strong> with <code>package.el</code>
-      | and <a href="http://tromey.com/elpa/">ELPA</a>.
-    li
-      | It's <strong>open source</strong>, so you can
-      | <a href="http://code.google.com/p/marmalade/">help improve it</a>.
-    li It goes <strong>great on toast</strong>.
-  span.intro To start using Marmalade,
-  ul
-    li
-      | <a href="http://repo.or.cz/w/emacs.git/blob_plain/1a0a666f941c99882093d7bd08ced15033bc3f0c:/lisp/emacs-lisp/package.el">
-      |   First install <code>package.el</code></a>.
-    li
-      | Add to your <code>.emacs</code>:
-      | <code class="elisp">(add-to-list 'package-archives '("marmalade" .
-      |     <span class="assoc-entry">"http://#{hostname}/packages/"</span>))</code>
-    li <code>C-x C-e</code> to evaluate it, and you're good to go!
+  span.intro EmacsFood is an archive an Emacs Lisp meta-packages.
+    :markdown
+      ### What is are EmacsFood meta-packages?
+
+      A meta-package is basically a plain old ELPA package, except it's purpose is to
+      install and configure a number of other regular ELPA packages.
+
+      Conceptually they are similar to (and inspired by) Spacemacs configuration layers.
+
+      For example, the Spacemacs git layer would be comparable to the
+      EmacsFood git meta-package, and vice-versa. They may or may not
+      provide the same packages / defaults.
+
+      ## Contributions
+
+      To contribute a meta-package fork the project on github:
+
+      **TODO** (We'll use a MELPA style recipe/build to static server)
+
+      We also hope that contributors will provide alternative
+      meta-packages so that a variety of strategies to configure an
+      aspect of Emacs, exist and are easily interchanged by switching
+      between similar meta-packages.
+
+      ## Starter Kits and Shared Emacs Configs
+
+      If you are thinking about, or currently provide a shared config,
+      or starter kit for Emacs. We also encourage you to consider
+      providing it as a meta-package (or collection of meta-packages)
+      either here on EmacsFood or on your own ELPA server. Feel free
+      to fork us.
+
+      ## About EmacsFood
+
+      EmacsFood is **Fully compatible** with `package.el` and
+      [ELPA](http://tromey.com/elpa/) and is **Open source**, so [you
+      can help improve it](https://github.com/emacsfodder/emacsfood/)
+
+  span.intro To start using EmacsFood,
+    :markdown
+      - Use with Emacs 24.x and up.
+      - Add to your `package-archives` list:
+
+              (add-to-list 'package-archives '("emacsfood" . "http://#{hostname}/packages/"))
+
 #packages
-  a.add(href="/packages/new") Add Package
-  table
-    tr
-      th.name Name
-      th.version Version
-      th.author Author
-    - each package in packages
-      tr
-        td.name
-          a(href="/packages/" + package.name.toLowerCase())= package.name
-        td.version= package.version.join('.')
-        td.author= authorName(package.headers['author'])
-  a.all(href="/packages") All Packages
+  :markdown
+    To add a new meta package, submit a pull request with a new emacs lisp package definition.
+
+    [List of Meta Packages](/packages)

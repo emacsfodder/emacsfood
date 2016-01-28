@@ -1,16 +1,17 @@
-marmalade-api(7) -- the marmalade HTTP API
+meatpack-api(7) -- the meatpack API
 ==========================================
 
 ## SUMMARY
 
-Marmalade supports a simple HTTP interface for uploading packages.
+Meatpack supports a simple HTTP interface for uploading packages. It
+is identical to the original EmacsFood api.
 
 ## RESPONSE FORMAT
 
-Marmalade can send responses either as JSON objects or Emacs Lisp assoc lists.
+Meatpack can send responses either as JSON objects or Emacs Lisp assoc lists.
 If the user agent sends `application/json` in its `Accept` header, it will be
 served JSON. If it sends `text/x-script.elisp`, it will be served Elisp.
-Otherwise, if nothing is specified, Marmalade will default to JSON.
+Otherwise, if nothing is specified, Meatpack will default to JSON.
 
 All responses, including error responses, will have a `message` key. The value
 of this key will be a human-readable description of the server event (or the

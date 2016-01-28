@@ -1,4 +1,4 @@
-/* Marmalade: an Emacs Lisp package server.
+/* EmacsFood: an Emacs Lisp package server.
  * Copyright (C) 2010 Google Inc.
  *
  * This program is free software: you can redistribute it and/or modify
@@ -26,5 +26,5 @@ $blueprint-grid-margin: 10px;
 // Or you can set !blueprint_grid_width to a fixed value and unset !blueprint_container_size -- it will be calculated for you.
 $blueprint-grid-width: ($blueprint-container-size + $blueprint-grid-margin) / $blueprint-grid-columns - $blueprint-grid-margin;
 
-$marmalade: darken(mix(red, yellow), 5%);
-$marmalade-hover: saturate(lighten($marmalade, 50%), 10%);
+$EmacsFood: darken(mix(red, yellow), 5%);
+$EmacsFood-hover: saturate(lighten($EmacsFood, 50%), 10%);

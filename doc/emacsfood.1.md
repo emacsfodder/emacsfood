@@ -1,9 +1,9 @@
-marmalade(1) -- spreadable elisp server
+meatpack (1) -- spreadable elisp server
 =======================================
 
 ## SYNOPSIS
 
-`marmalade` [<OPTIONS>]
+`meatpack ` [<OPTIONS>]
 
 ## SUMMARY
 
@@ -17,14 +17,14 @@ An Emacs Lisp package server.
   Print a usage message, then exit.
 
 * `-V`, `--version`:
-  Print the Marmalade version, then exit.
+  Print the EmacsFood version, then exit.
 
 ### Server Configuration
 
 * `-p` <PORT>, `--port` <PORT>:
-  Sets the port on which Marmalade will run (default 3000).
+  Sets the port on which EmacsFood will run (default 3000).
 
 ### Backend Configuration
 
 * `-d` <DIR>, `--data` <DIR>:
-  Sets the directory in which Marmalade will store its data (default ./data).
+  Sets the directory in which EmacsFood will store its data (default ./data).

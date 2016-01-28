@@ -1,5 +1,5 @@
-// Marmalade: an Emacs Lisp package server.
-// Copyright (C) 2010 Google Inc.
+// EmacsFood: an Emacs Lisp package server.
+// Copyright (C) 2016 EmacsFodder
 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -17,31 +17,18 @@
 !!! 5
 html(lang="en")
   head
-    title Marmalade: Spreadable Elisp
-    link(rel="stylesheet", type="text/css", href="/stylesheets/screen.css")
+    title EmacsFood: Meta Packages for Integrated Goodness
+    link(rel="stylesheet", type="text/css", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
+    link(rel="stylesheet", type="text/css", href="https://bootswatch.com/yeti/bootstrap.css")
   body
-    header
-      hgroup
-        a(href="/")
-          h1 Marmalade
-          h2 Spreadable Elisp
-      nav
-        - if (username)
-          .signed-in Signed in as <span class="name">#{username}</span>
-          form(accept-charset="utf-8", action="/logout", method="post")
-            input(type="submit", value="Sign Out")
-        - else
-          a(href="/login") Sign In
-          a(href="/register") Sign Up
-        form(accept-charset="utf-8", action="/packages", method="get")
-          input(type="search", name="q")
-    #main(class=mainClass)
-      - each message, name in flash
-        div(class=name)!= message
+    .container
+      h1 EmacsFood
+      h2 Meta Packages for Integrated Emacs Goodness
 
       != body
 
-    footer
-      a(href="/about") About
-      a(href="/docs") Docs
-      a(href="http://code.google.com/p/marmalade") Code
+    // Bootstrap core JavaScript
+    // ==================================================
+    // Placed at the end of the document so the pages load faster
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')

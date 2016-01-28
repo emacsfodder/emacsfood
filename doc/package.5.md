@@ -1,9 +1,9 @@
-marmalade-package(5) -- the marmalade package format
+meatpack-package(5) -- the meatpack  package format
 ====================================================
 
 ## SUMMARY
 
-Marmalade uses the [ELPA and `package.el`](http://tromey.com/elpa/) package
+Meatpack uses the [ELPA and `package.el`](http://tromey.com/elpa/) package
 format, with a few extensions for providing additional metadata. This format is
 designed to be easy to embed in existing Elisp packages without substantial
 modification. It supports both single `.el` files and multi-file `.tar`
@@ -46,14 +46,14 @@ least a file named `<name>-pkg.el`. This file must have a single call to the
 * `requirements' (optional): A quoted list of package/version pairs that this
   package depends on.
 
-## MARMALADE EXTENSIONS
+## EMACSFOOD EXTENSIONS
 
 The formats described above are the formats expected by `package.el`. However,
-Marmalade adds several extensions to this format. These extensions mostly
+Meatpack adds several extensions to this format. These extensions mostly
 involve parsing headers that many packages already have in order to provide more
 information about the packages.
 
-For multi-file packages, Marmalade will look at headers in `<name>.el` as well
+For multi-file packages, Meatpack will look at headers in `<name>.el` as well
 as looking at the ``define-package'` call in `<name>-pkg.el`. `<name>.el`, if it
 exists, is expected to be in the same format as a single-file package, although
 it need not contain the `Version` header.
@@ -68,7 +68,7 @@ The `Url` header is used to determine the homepage link for the package.
 
 ### PACKAGE COMMENTARY
 
-In addition to the one-line description that `package.el` supports, Marmalade
+In addition to the one-line description that `package.el` supports, Meatpack
 allows packages to include longer descriptions of themselves that will be
 displayed on the package page. The way this is done differs for single-file and
 multi-file packages.
@@ -86,7 +86,7 @@ sections are of the form
 
 For multi-file packages, the `README` file is used.
 
-When presenting the commentary text as HTML, Marmalade will separate paragraphs
+When presenting the commentary text as HTML, Meatpack will separate paragraphs
 with the `<p>` tag but will otherwise do no formatting.
 
 ## EXAMPLES

@@ -1,4 +1,4 @@
- /* Marmalade: an Emacs Lisp package server.
+ /* EmacsFood: an Emacs Lisp package server.
  * Copyright (C) 2010 Google Inc.
  *
  * This program is free software: you can redistribute it and/or modify
@@ -33,9 +33,9 @@
     }
 
     li {
-      border-top: 1px solid desaturate(lighten($marmalade, 30%), 70%);
+      border-top: 1px solid desaturate(lighten($EmacsFood, 30%), 70%);
       &:first-child {border-top: none}
-      &:hover {background-color: $marmalade-hover}
+      &:hover {background-color: $EmacsFood-hover}
     }
 
     .name, .version {

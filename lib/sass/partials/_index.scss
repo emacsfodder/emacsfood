@@ -1,4 +1,4 @@
-/* Marmalade: an Emacs Lisp package server.
+/* EmacsFood: an Emacs Lisp package server.
  * Copyright (C) 2010 Google Inc.
  *
  * This program is free software: you can redistribute it and/or modify
@@ -46,7 +46,7 @@
     @include column($blueprint-grid-columns - $start-columns, true);
     .add {
       @include fancy-button;
-      @include fancy-button-colors($marmalade);
+      @include fancy-button-colors($EmacsFood);
       @include box-sizing(border-box);
       width: 100%;
       text-align: center;
@@ -76,7 +76,7 @@
         display: block;
       }
       tr:hover {
-        background-color: $marmalade-hover;
+        background-color: $EmacsFood-hover;
         a {font-weight: bold}
       }
       margin-bottom: 0;
